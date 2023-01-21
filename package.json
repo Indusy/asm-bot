@@ -1,0 +1,63 @@
+{
+  "name": "asm-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "bin": "dist/main.js",
+  "scripts": {
+    "build": "webpack --config configs/webpack.prod.config.ts",
+    "dev": "webpack --watch --config configs/webpack.dev.config.ts",
+    "start": "node dist/main.js",
+    "lint": "eslint --fix \"./src/**/*.{t,j}s\"",
+    "pkg": "npm run build && pkg ."
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^18.11.18",
+    "@types/node-telegram-bot-api": "^0.57.6",
+    "@types/sharp": "^0.31.1",
+    "@types/webpack-node-externals": "^2.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "fork-ts-checker-webpack-plugin": "^7.3.0",
+    "nodemon-webpack-plugin": "^4.8.1",
+    "pkg": "^5.8.0",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0",
+    "webpackbar": "^5.0.2"
+  },
+  "dependencies": {
+    "commander": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "dotenv-expand": "^10.0.0",
+    "node-telegram-bot-api": "^0.61.0",
+    "sharp": "^0.31.3"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "assets": [
+      "node_modules/sharp/**"
+    ],
+    "outputPath": "pkg",
+    "targets": [
+      "node18-linux-x64"
+    ]
+  }
+}

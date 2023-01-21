@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["src", "shims.d.ts"],
+  "exclude": ["dist", "node_modules"]
+}
